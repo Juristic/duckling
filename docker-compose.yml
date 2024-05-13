@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+   duckling_8000:
+      image: haskell-duckling
+      restart: always
+      ports:
+         - '8000:8000'
+
+   duckling_8001:
+      image: haskell-duckling
+      restart: always
+      ports:
+         - '8001:8000'
+
+   duckling_8002:
+      image: haskell-duckling
+      restart: always
+      ports:
+         - '8002:8000'
