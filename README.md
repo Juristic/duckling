@@ -1,13 +1,7 @@
-![Duckling Logo](https://github.com/facebook/duckling/raw/main/logo.png)
 
-# Duckling [![Support Ukraine](https://img.shields.io/badge/Support-Ukraine-FFD500?style=flat&labelColor=005BBB)](https://opensource.fb.com/support-ukraine) [![Build Status](https://travis-ci.org/facebook/duckling.svg?branch=master)](https://travis-ci.org/facebook/duckling)
+# Duckling
 
-Duckling is a Haskell library that parses text into structured data.
-
-```bash
-"the first Tuesday of October"
-=> {"value":"2017-10-03T00:00:00.000-07:00","grain":"day"}
-```
+Duckling is a Haskell library that parses text into structured data built by [facebook](https://github.com/facebook/duckling).
 
 ## Requirements
 
@@ -27,14 +21,17 @@ the issues it finds.
 
 ## Quickstart
 
-To compile and run the binary:
+Build the Docker Image
 
 ```bash
-stack build
-stack exec duckling-example-exe
+docker build 'https://github.com/Juristic/duckling.git#main'
 ```
 
-The first time you run it, it will download all required packages.
+Build the containers
+
+```bash
+docker compose up -d -f 'https://github.com/Juristic/duckling.git#main'
+```
 
 This runs a basic HTTP server. Example request:
 
